@@ -13,10 +13,13 @@ import PaymentsPage from "./pages/Dashboard/PaymentsPage";
 import CompliancePage from "./pages/Dashboard/CompliancePage";
 import SupportPage from "./pages/Dashboard/SupportPage";
 import AdminPage from "./pages/Dashboard/AdminPage";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <ScrollToTop />
       <RouterRoutes>
         <Route path="/" element={<HomePage />} />
@@ -33,6 +36,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       <ScrollUp />
+      <Footer />
     </BrowserRouter>
   );
 };
