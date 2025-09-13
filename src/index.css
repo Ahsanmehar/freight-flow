@@ -5,12 +5,12 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #121212;
+  background-color: #0c0c0c;
 }
 
 @theme {
   --color-text1: #d1d5db; /* Light Gray */
-  --color-tex2: #9ca3af; /* Medium Gray */
+  --color-text2: #9ca3af; /* Medium Gray */
   --color-red-accent1: #e63946; /* red1 */
   --color-red-accent2: #ff3b30; /* red1 */
   --color-bright-blue1: #007bff; /* blue1 */
