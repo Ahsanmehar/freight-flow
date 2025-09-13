@@ -28,8 +28,8 @@ const App = () => {
         <Route path="/request-load" element={<RequestLoadPage />} />
         <Route path="/payments" element={<PaymentsPage />} />
         <Route path="/compliance" element={<CompliancePage />} />
-        <Route path="/support" element={<SupportPage />} />
-        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/SupportPage" element={<SupportPage />} />
+        <Route path="/AdminPage" element={<AdminPage />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       <ScrollUp />
