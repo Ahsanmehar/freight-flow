@@ -39,7 +39,7 @@ const CounterItem = ({ item, index }) => {
     if (isInView) {
       startAnimation();
     }
-  }, [isInView]);
+  }, [isInView,startAnimation]);
 
   const formatNumber = (num) => {
     if (item.number === 2.5) {
