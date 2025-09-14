@@ -1,3 +1,9 @@
-export default function PricingPage() {
-  return <main>PricingPage</main>;
+import React from 'react'
+
+function index() {
+  return (
+    <div>index</div>
+  )
 }
+
+export default index
