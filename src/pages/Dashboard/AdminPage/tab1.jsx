@@ -11,7 +11,7 @@ import TechIcon from "@/components/TechIcon"
 // } from "@/components/ui/select"
 // import { useState } from "react"
 // import { Switch } from "@/components/ui/switch"
-export default function Tab1() {
+export default function Tab1() {  
   // const [isopen, setisopen] = useState(false)
   return (
     <motion.div initial={{ opacity: 0 }}
