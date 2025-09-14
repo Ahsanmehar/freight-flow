@@ -831,6 +831,7 @@ function DriverSignupPage() {
           paragraph="Complete all steps to join our network of professional drivers"
           center
           width="665px"
+          showIcon={true}
         />
 
         {/* Progress Indicator */}
