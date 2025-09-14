@@ -10,7 +10,7 @@ body {
 
 @theme {
   --color-text1: #d1d5db; /* Light Gray */
-  --color-tex2: #9ca3af; /* Medium Gray */
+  --color-text2: #9ca3af; /* Medium Gray */
   --color-red-accent1: #e63946; /* red1 */
   --color-red-accent2: #ff3b30; /* red1 */
   --color-bright-blue1: #007bff; /* blue1 */
@@ -160,4 +160,95 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+.holographic-card {
+
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width:775px) {
+  .holographic-card {
+  width: 100%;
+  height: 200px;
+}
+}
+
+
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+
+
+
+
+
+.hover-underline {
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right,#007bff , #1d4ed8);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
 }
