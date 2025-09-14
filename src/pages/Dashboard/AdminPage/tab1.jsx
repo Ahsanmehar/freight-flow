@@ -1,22 +1,23 @@
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion"
-import TechIcon from "@/components/TechIcon"
-// import TechIcon from "@/components/TechIcon"
-// import {
-//   Select,
-//   SelectContent,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "@/components/ui/select"
-// import { useState } from "react"
-// import { Switch } from "@/components/ui/switch"
-export default function Tab1() {  
-  // const [isopen, setisopen] = useState(false)
+import { motion } from "framer-motion";
+import TechIcon from "@/components/TechIcon";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useState } from "react";
+import { Switch } from "@/components/ui/switch";
+export default function Tab1() {
+  const [isopen, setisopen] = useState(false);
   return (
-    <motion.div initial={{ opacity: 0 }}
+    <motion.div
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeIn" }}>
+      transition={{ duration: 1, ease: "easeIn" }}
+    >
       <div className="flex gap-3 items-center justify-between  flex-wrap w-full mt-6">
         <div className="flex flex-wrap items-center justify-self-start gap-4">
           <div className="flex px-4 py-3  rounded-md border-2 overflow-hidden max-w-md  md:mx-auto">
@@ -34,9 +35,12 @@ export default function Tab1() {
               className=" outline-none bg-transparent text-gray-600 text-sm placeholder:text-white"
             />
           </div>
-          {/* <Select>
-            <SelectTrigger className={`text-white`}>
-              <SelectValue placeholder="Select category" className="placeholder:text-white" />
+          <Select>
+            <SelectTrigger className={`text-white !h-13`}>
+              <SelectValue
+                placeholder="Select category"
+                className="placeholder:text-white"
+              />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="billing">All Status</SelectItem>
@@ -44,93 +48,144 @@ export default function Tab1() {
               <SelectItem value="general">Dispatched</SelectItem>
               <SelectItem value="compliance">in Transit</SelectItem>
             </SelectContent>
-          </Select> */}
-          <button className="flex  items-center gap-2 px-1 py-1 m-1 rounded-md border font-medium w-20  text-gray-300 hover:border-[#007bff]"><TechIcon  name={"filter"}/>Filter</button>
+          </Select>
+          <button className="flex  items-center gap-2 px-1 py-1 m-1 rounded-md border font-medium w-20  text-gray-300 hover:border-[#007bff]">
+            <TechIcon name={"filter"} />
+            Filter
+          </button>
         </div>
         <div className="flex items-center space-x-2">
-          <label htmlFor="mapview" className="text-white ">Map View</label>
+          <label htmlFor="mapview" className="text-white ">
+            Map View
+          </label>
 
-          {/* <Switch id="mapview" checked={isopen} onCheckedChange={setisopen} /> */}
-
+          <Switch id="mapview" checked={isopen} onCheckedChange={setisopen} />
         </div>
       </div>
 
-      {/* {
-        isopen ? (
-          <motion.div initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeIn" }} id="mapview" className="mt-10 px-6 py-6 h-[400px] inset-shadow-sm inset-shadow-[#1d4ed8] rounded-md flex flex-col items-center justify-center gap-3">
-            <TechIcon name="map" className="text-[gray] size-[50px]"/>
-            <h1 className="font-medium text-xl text-white">GPS Map View</h1>
-            <p className="text-lg font-normal text-gray-300">Interactive map showing load locations and carrier positions</p>
-          </motion.div>
-        ) : (
-          <motion.div initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeIn" }} className="px-5 py-5 inset-shadow-sm inset-shadow-[#1d4ed8] rounded-md  mt-10 space-y-10">
-            <h1 className="text-lg font-normal text-white">Role Management</h1>
-            <div className="flex flex-wrap items-center justify-between px-2.5 py-3.5 border rounded-lg gap-5">
-              <div className="flex items-center gap-3 ">
-                <TechIcon name="truck" className="bg-[#007bff] rounded-md px-2 py-2 size-[40px]" />
-                <span className="flex flex-col items-start ">
-                  <span className="flex items-start gap-2"><h1 className="text-white">LD-001</h1><span className="flex border border-gray-400 items-center gap-2 text-green-600 text-xs font-medium bg-green-200 p-1 tracking-wide rounded-md">Business Role</span></span>
-                  <h1 className="text-sm text-gray-300 md:text-base ">Los Angeles, CA → Phoenix, AZ</h1>
-                  <h1 className="text-sm text-gray-300 md:text-base ">Dry Van • 28,000 lbs • 374 miles</h1>
+      {isopen ? (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeIn" }}
+          id="mapview"
+          className="mt-10 px-6 py-6 h-[400px] inset-shadow-sm inset-shadow-[#1d4ed8] rounded-md flex flex-col items-center justify-center gap-3"
+        >
+          <TechIcon name="map" className="text-[gray] size-[50px]" />
+          <h1 className="font-medium text-xl text-white">GPS Map View</h1>
+          <p className="text-lg font-normal text-gray-300">
+            Interactive map showing load locations and carrier positions
+          </p>
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeIn" }}
+          className="px-5 py-5 inset-shadow-sm inset-shadow-[#1d4ed8] rounded-md  mt-10 space-y-10"
+        >
+          <h1 className="text-lg font-normal text-white">Role Management</h1>
+          <div className="flex flex-wrap items-center justify-between px-2.5 py-3.5 border rounded-lg gap-5">
+            <div className="flex items-center gap-3 ">
+              <TechIcon
+                name="truck"
+                className="bg-[#007bff] rounded-md px-2 py-2 size-[40px]"
+              />
+              <span className="flex flex-col items-start ">
+                <span className="flex items-start gap-2">
+                  <h1 className="text-white">LD-001</h1>
+                  <span className="flex border border-gray-400 items-center gap-2 text-green-600 text-xs font-medium bg-green-200 p-1 tracking-wide rounded-md">
+                    Business Role
+                  </span>
                 </span>
-              </div>
-              <div className="flex items-start sm:items-end flex-col space-y-2">
-                <h1 className="text-white font-medium">$1,200</h1>
-                <h1 className="text-xs text-gray-300 md:text-base ">Dry Van • 28,000 lbs • 374 miles</h1>
-              </div>
-              <div className="gap-1 flex items-center ">
-                <TechIcon name="eye" className="text-[blue] size-[32px]"/>
-                <TechIcon name="file" className="text-[orange] size-[32px]"/>
-                <TechIcon name="elipsis" className="text-[red] size-[32px]"/>
-              </div>
+                <h1 className="text-sm text-gray-300 md:text-base ">
+                  Los Angeles, CA → Phoenix, AZ
+                </h1>
+                <h1 className="text-sm text-gray-300 md:text-base ">
+                  Dry Van • 28,000 lbs • 374 miles
+                </h1>
+              </span>
             </div>
-            <div className="flex flex-wrap items-center justify-between px-2.5 py-3.5 border rounded-lg gap-5">
-              <div className="flex items-center gap-3 ">
-                <TechIcon name="truck" className="bg-[#007bff] rounded-md px-2 py-2 size-[40px]" />
-                <span className="flex flex-col items-start ">
-                  <span className="flex items-start gap-2"><h1 className="text-white">LD-001</h1><span className="flex border border-gray-400 items-center gap-2 text-green-600 text-xs font-medium bg-green-200 p-1 tracking-wide rounded-md">Business Role</span></span>
-                  <h1 className="text-sm text-gray-300 md:text-base ">Los Angeles, CA → Phoenix, AZ</h1>
-                  <h1 className="text-sm text-gray-300 md:text-base ">Dry Van • 28,000 lbs • 374 miles</h1>
+            <div className="flex items-start sm:items-end flex-col space-y-2">
+              <h1 className="text-white font-medium">$1,200</h1>
+              <h1 className="text-xs text-gray-300 md:text-base ">
+                Dry Van • 28,000 lbs • 374 miles
+              </h1>
+            </div>
+            <div className="gap-1 flex items-center ">
+              <TechIcon name="eye" className="text-[blue] size-[32px]" />
+              <TechIcon name="file" className="text-[orange] size-[32px]" />
+              <TechIcon name="elipsis" className="text-[red] size-[32px]" />
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-between px-2.5 py-3.5 border rounded-lg gap-5">
+            <div className="flex items-center gap-3 ">
+              <TechIcon
+                name="truck"
+                className="bg-[#007bff] rounded-md px-2 py-2 size-[40px]"
+              />
+              <span className="flex flex-col items-start ">
+                <span className="flex items-start gap-2">
+                  <h1 className="text-white">LD-001</h1>
+                  <span className="flex border border-gray-400 items-center gap-2 text-green-600 text-xs font-medium bg-green-200 p-1 tracking-wide rounded-md">
+                    Business Role
+                  </span>
                 </span>
-              </div>
-              <div className="flex items-start sm:items-end flex-col space-y-2">
-                <h1 className="text-white font-medium">$1,200</h1>
-                <h1 className="text-xs text-gray-300 md:text-base ">Dry Van • 28,000 lbs • 374 miles</h1>
-              </div>
-              <div className="gap-1 flex items-center ">
-                  <TechIcon name="eye" className="text-[blue] size-[32px]"/>
-                <TechIcon name="file" className="text-[orange] size-[32px]"/>
-                <TechIcon name="elipsis" className="text-[red] size-[32px]"/>
-              </div>
+                <h1 className="text-sm text-gray-300 md:text-base ">
+                  Los Angeles, CA → Phoenix, AZ
+                </h1>
+                <h1 className="text-sm text-gray-300 md:text-base ">
+                  Dry Van • 28,000 lbs • 374 miles
+                </h1>
+              </span>
             </div>
-            <div className="flex flex-wrap items-center justify-between px-2.5 py-3.5 border rounded-lg gap-5">
-              <div className="flex items-center gap-3 ">
-                <TechIcon name="truck" className="bg-[#007bff] rounded-md px-2 py-2 size-[40px]" />
-                <span className="flex flex-col items-start ">
-                  <span className="flex items-start gap-2"><h1 className="text-white">LD-001</h1><span className="flex border border-gray-400 items-center gap-2 text-green-600 text-xs font-medium bg-green-200 p-1 tracking-wide rounded-md">Business Role</span></span>
-                  <h1 className="text-sm text-gray-300 md:text-base ">Los Angeles, CA → Phoenix, AZ</h1>
-                  <h1 className="text-sm text-gray-300 md:text-base ">Dry Van • 28,000 lbs • 374 miles</h1>
+            <div className="flex items-start sm:items-end flex-col space-y-2">
+              <h1 className="text-white font-medium">$1,200</h1>
+              <h1 className="text-xs text-gray-300 md:text-base ">
+                Dry Van • 28,000 lbs • 374 miles
+              </h1>
+            </div>
+            <div className="gap-1 flex items-center ">
+              <TechIcon name="eye" className="text-[blue] size-[32px]" />
+              <TechIcon name="file" className="text-[orange] size-[32px]" />
+              <TechIcon name="elipsis" className="text-[red] size-[32px]" />
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-between px-2.5 py-3.5 border rounded-lg gap-5">
+            <div className="flex items-center gap-3 ">
+              <TechIcon
+                name="truck"
+                className="bg-[#007bff] rounded-md px-2 py-2 size-[40px]"
+              />
+              <span className="flex flex-col items-start ">
+                <span className="flex items-start gap-2">
+                  <h1 className="text-white">LD-001</h1>
+                  <span className="flex border border-gray-400 items-center gap-2 text-green-600 text-xs font-medium bg-green-200 p-1 tracking-wide rounded-md">
+                    Business Role
+                  </span>
                 </span>
-              </div>
-              <div className="flex items-start sm:items-end flex-col space-y-2">
-                <h1 className="text-white font-medium">$1,200</h1>
-                <h1 className="text-xs text-gray-300 md:text-base ">Dry Van • 28,000 lbs • 374 miles</h1>
-              </div>
-              <div className="gap-1 flex items-center ">
-                <TechIcon name="eye" className="text-[blue] size-[32px]"/>
-                <TechIcon name="file" className="text-[orange] size-[32px]"/>
-                <TechIcon name="elipsis" className="text-[red] size-[32px]"/>
-              </div>
+                <h1 className="text-sm text-gray-300 md:text-base ">
+                  Los Angeles, CA → Phoenix, AZ
+                </h1>
+                <h1 className="text-sm text-gray-300 md:text-base ">
+                  Dry Van • 28,000 lbs • 374 miles
+                </h1>
+              </span>
             </div>
-          </motion.div>
-        )
-      } */}
-
-
+            <div className="flex items-start sm:items-end flex-col space-y-2">
+              <h1 className="text-white font-medium">$1,200</h1>
+              <h1 className="text-xs text-gray-300 md:text-base ">
+                Dry Van • 28,000 lbs • 374 miles
+              </h1>
+            </div>
+            <div className="gap-1 flex items-center ">
+              <TechIcon name="eye" className="text-[blue] size-[32px]" />
+              <TechIcon name="file" className="text-[orange] size-[32px]" />
+              <TechIcon name="elipsis" className="text-[red] size-[32px]" />
+            </div>
+          </div>
+        </motion.div>
+      )}
     </motion.div>
-  )
+  );
 }

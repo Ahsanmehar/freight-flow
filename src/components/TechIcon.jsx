@@ -1,6 +1,24 @@
 import {
+  Activity,
+  CircleQuestionMark,
+  DollarSign,
+  Ellipsis,
+  Eye,
+  FileText,
+  Filter,
   Home,
+  Mail,
+  Map,
+  MessageCircle,
+  Package,
+  Phone,
+  Search,
   Send,
+  Settings,
+  Shield,
+  Truck,
+  UserRoundCheck,
+  Users,
 } from "lucide-react";
 
 const TechIcon = ({ name, className = "" }) => {
@@ -25,6 +43,7 @@ const TechIcon = ({ name, className = "" }) => {
     shield: <Shield className={className} />,
     users: <Users className={className} />,
     package: <Package className={className} />,
+
   };
 
   return icons[name.toLowerCase()] || <span className={className}>{name}</span>;
