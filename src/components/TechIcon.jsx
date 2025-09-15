@@ -1,7 +1,6 @@
 import {
   Activity,
   CircleQuestionMark,
-  DollarSign,
   Ellipsis,
   Eye,
   FileText,
@@ -16,21 +15,20 @@ import {
   Send,
   Settings,
   Shield,
-  Truck,
   UserRoundCheck,
   Users,
   Box,
   DollarSign,
   Clock,
   Truck,
-   Bell,
+  Bell,
   AlertTriangle,
   CheckCircle,
   Plus,
   CreditCard,
   ShieldCheck,
   Headphones,
-  Star
+  Star,
 } from "lucide-react";
 
 const TechIcon = ({ name, className = "" }) => {
@@ -43,7 +41,6 @@ const TechIcon = ({ name, className = "" }) => {
     filter: <Filter className={className} />,
     map: <Map className={className} />,
     file: <FileText className={className} />,
-    truck: <Truck className={className} />,
     dollar: <DollarSign className={className} />,
     settings: <Settings className={className} />,
     activity: <Activity className={className} />,
@@ -55,9 +52,8 @@ const TechIcon = ({ name, className = "" }) => {
     shield: <Shield className={className} />,
     users: <Users className={className} />,
     package: <Package className={className} />,
-
     box: <Box className={className} />,
-     "dollar-sign": <DollarSign className={className} />,
+    "dollar-sign": <DollarSign className={className} />,
     clock: <Clock className={className} />,
     truck: <Truck className={className} />,
     bell: <Bell className={className} />,
@@ -67,7 +63,7 @@ const TechIcon = ({ name, className = "" }) => {
     "credit-card": <CreditCard className={className} />,
     "shield-check": <ShieldCheck className={className} />,
     headphones: <Headphones className={className} />,
-    star: <Star className={className} />
+    star: <Star className={className} />,
   };
 
   return icons[name.toLowerCase()] || <span className={className}>{name}</span>;
