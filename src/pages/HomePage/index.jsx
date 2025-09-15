@@ -4,6 +4,7 @@ import CounterSection from "./counter";
 import TrustSection from "./trust";
 
 export default function HomePage() {
+
   return (
     <>
       <main className="text-secondary text-2xl font-bold">
