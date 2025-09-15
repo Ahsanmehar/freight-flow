@@ -1,5 +1,5 @@
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -10,11 +10,11 @@ import {
 
 const states = ["California", "Texas", "Florida", "New York"];
 
-export function CompanyDetails({ 
-  formData = {}, 
-  setFormData = () => {}, 
-  errors = {}, 
-  setErrors = () => {} 
+export function CompanyDetails({
+  formData = {},
+  setFormData = () => {},
+  errors = {},
+  setErrors = () => {},
 }) {
   const handleInputChange = (field, value) => {
     setFormData((prev) => ({
@@ -36,53 +36,10 @@ export function CompanyDetails({
     "LLC",
     "Partnership",
     "Sole Proprietorship",
-    "Other"
+    "Other",
   ];
 
-  const validateField = (field, value) => {
-    let error = "";
-    
-    switch (field) {
-      case "firstName":
-        if (!value.trim()) error = "First name is required";
-        break;
-      case "lastName":
-        if (!value.trim()) error = "Last name is required";
-        break;
-      case "email":
-        if (!value.trim()) {
-          error = "Email is required";
-        } else if (!validateEmail(value)) {
-          error = "Please enter a valid email address";
-        }
-        break;
-      case "phone":
-        if (!value.trim()) {
-          error = "Phone number is required";
-        } else if (!validatePhone(value)) {
-          error = "Please enter a valid phone number";
-        }
-        break;
-      case "zipCode":
-        if (value && !validateZipCode(value)) {
-          error = "Please enter a valid ZIP code";
-        }
-        break;
-      default:
-        break;
-    }
-    
-    setErrors((prev) => ({
-      ...prev,
-      [field]: error,
-    }));
-    
-    return !error;
-  };
-
-  const handleBlur = (field, value) => {
-    validateField(field, value);
-  };
+  
 
   return (
     <div className="space-y-6">
@@ -116,7 +73,9 @@ export function CompanyDetails({
             </Label>
             <Select
               value={formData.businessType || ""}
-              onValueChange={(value) => handleInputChange("businessType", value)}
+              onValueChange={(value) =>
+                handleInputChange("businessType", value)
+              }
             >
               <SelectTrigger className="w-full mt-2 !h-14">
                 <SelectValue placeholder="Select business type" />
@@ -158,7 +117,9 @@ export function CompanyDetails({
           <Input
             id="businessAddress"
             value={formData.businessAddress || ""}
-            onChange={(e) => handleInputChange("businessAddress", e.target.value)}
+            onChange={(e) =>
+              handleInputChange("businessAddress", e.target.value)
+            }
             className="mt-2"
             placeholder="Enter business address"
           />
@@ -226,7 +187,9 @@ export function CompanyDetails({
               <Input
                 id="contactName"
                 value={formData.contactName || ""}
-                onChange={(e) => handleInputChange("contactName", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("contactName", e.target.value)
+                }
                 className="mt-2"
                 placeholder="Enter contact name"
               />
@@ -242,7 +205,9 @@ export function CompanyDetails({
                 id="contactPhone"
                 type="tel"
                 value={formData.contactPhone || ""}
-                onChange={(e) => handleInputChange("contactPhone", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("contactPhone", e.target.value)
+                }
                 className="mt-2"
                 placeholder="(XXX) XXX-XXXX"
               />
@@ -259,7 +224,9 @@ export function CompanyDetails({
               id="contactEmail"
               type="email"
               value={formData.contactEmail || ""}
-              onChange={(e) => handleInputChange("contactEmail", e.target.value)}
+              onChange={(e) =>
+                handleInputChange("contactEmail", e.target.value)
+              }
               className="mt-2"
               placeholder="Enter contact email"
             />

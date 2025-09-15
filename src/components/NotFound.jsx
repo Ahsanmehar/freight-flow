@@ -33,7 +33,7 @@ export default function NotFound() {
                 cy="81.5"
                 r="68.5"
                 
-                fill="#f472b6"
+                fill="#ff6b35"
               />
               <mask
                 id="mask0_116:1137"
@@ -49,7 +49,7 @@ export default function NotFound() {
                   cx="227.5"
                   cy="81.5"
                   r="68.5"
-                  fill="#8b5cf6"
+                  fill="#ff6b35"
                 />
               </mask>
               <g mask="url(#mask0_116:1137)">
@@ -100,8 +100,8 @@ export default function NotFound() {
                   y2="27.0837"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#8b5cf6" stopOpacity="0" />
-                  <stop offset="1" stopColor="#f472b6" />
+                  <stop stopColor="#ff6b35" stopOpacity="0" />
+                  <stop offset="1" stopColor="#ff6b35" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_116:1137"
@@ -111,8 +111,8 @@ export default function NotFound() {
                   y2="-2.91631"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#8b5cf6" stopOpacity="0" />
-                  <stop offset="1" stopColor="#f472b6" />
+                  <stop stopColor="#ff6b35" stopOpacity="0" />
+                  <stop offset="1" stopColor="#ff6b35" />
                 </linearGradient>
                 <radialGradient
                   id="paint2_radial_116:1137"
@@ -122,16 +122,16 @@ export default function NotFound() {
                   gradientUnits="userSpaceOnUse"
                   gradientTransform="translate(227.5 81.5) rotate(90) scale(73.5368)"
                 >
-                  <stop stopColor="#8b5cf6" stopOpacity="0.47" />
-                  <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+                  <stop stopColor="#ff6b35" stopOpacity="0.47" />
+                  <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
                 </radialGradient>
               </defs>
             </svg>
           </div>
-          <h3 className="mb-4 text-3xl font-bold text-black sm:text-4xl">
+          <h3 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
             Sorry, the page can’t be found
           </h3>
-          <p className="mb-10 text-base font-medium leading-relaxed text-text sm:text-lg">
+          <p className="mb-10 text-base font-medium leading-relaxed text-text2 sm:text-lg">
             The page you were looking for appears to have been moved, deleted or
             does not exist.
           </p>
@@ -161,7 +161,7 @@ export default function NotFound() {
               y="110.344"
               width="116.719"
               height="116.438"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <rect
               opacity="0.1"
@@ -174,7 +174,7 @@ export default function NotFound() {
             <path
               opacity="0.5"
               d="M172.688 110.344L229.219 51V167.601L172.688 226.781V110.344Z"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <path
               opacity="0.1"
@@ -184,7 +184,7 @@ export default function NotFound() {
             <path
               opacity="0.5"
               d="M0 169.619L56.25 110.344V226.85L0 286.125V169.619Z"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <path
               opacity="0.1"
@@ -197,7 +197,7 @@ export default function NotFound() {
               y="51.2812"
               width="119.25"
               height="116.438"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <rect
               opacity="0.1"
@@ -210,7 +210,7 @@ export default function NotFound() {
             <path
               opacity="0.5"
               d="M347.906 51.2812L405 2V110.113L347.906 167.719V51.2812Z"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <path
               opacity="0.1"
@@ -227,8 +227,8 @@ export default function NotFound() {
               y2="145.47"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_116:1140"
@@ -238,8 +238,8 @@ export default function NotFound() {
               y2="143.95"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint5_linear_116:1140"
@@ -249,8 +249,8 @@ export default function NotFound() {
               y2="249.947"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint7_linear_116:1140"
@@ -260,8 +260,8 @@ export default function NotFound() {
               y2="168.552"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint9_linear_116:1140"
@@ -271,8 +271,8 @@ export default function NotFound() {
               y2="34.2741"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -292,7 +292,7 @@ export default function NotFound() {
               y="108.344"
               width="116.719"
               height="116.438"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <rect
               opacity="0.1"
@@ -305,7 +305,7 @@ export default function NotFound() {
             <path
               opacity="0.5"
               d="M173.688 108.344L230.219 49V165.601L173.688 224.781V108.344Z"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <path
               opacity="0.1"
@@ -315,7 +315,7 @@ export default function NotFound() {
             <path
               opacity="0.5"
               d="M1 167.619L57.25 108.344V224.85L1 284.125V167.619Z"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <path
               opacity="0.1"
@@ -328,7 +328,7 @@ export default function NotFound() {
               y="49.2812"
               width="119.25"
               height="116.438"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <rect
               opacity="0.1"
@@ -341,7 +341,7 @@ export default function NotFound() {
             <path
               opacity="0.5"
               d="M348.906 49.2812L406 0V108.113L348.906 165.719V49.2812Z"
-              stroke="#8b5cf6"
+              stroke="#ff6b35"
             />
             <path
               opacity="0.1"
@@ -359,7 +359,7 @@ export default function NotFound() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#132c44" stopOpacity="0" />
-              <stop offset="1" stopColor="#f472b6" />
+              <stop offset="1" stopColor="#ff6b35" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_116:1151"
@@ -369,8 +369,8 @@ export default function NotFound() {
               y2="143.47"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_116:1151"
@@ -381,7 +381,7 @@ export default function NotFound() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#132c44" stopOpacity="0" />
-              <stop offset="1" stopColor="#f472b6" />
+              <stop offset="1" stopColor="#ff6b35" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_116:1151"
@@ -391,8 +391,8 @@ export default function NotFound() {
               y2="141.95"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint4_linear_116:1151"
@@ -403,7 +403,7 @@ export default function NotFound() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#132c44" stopOpacity="0" />
-              <stop offset="1" stopColor="#f472b6" />
+              <stop offset="1" stopColor="#ff6b35" />
             </linearGradient>
             <linearGradient
               id="paint5_linear_116:1151"
@@ -413,8 +413,8 @@ export default function NotFound() {
               y2="247.947"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint6_linear_116:1151"
@@ -425,7 +425,7 @@ export default function NotFound() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#132c44" stopOpacity="0" />
-              <stop offset="1" stopColor="#f472b6" />
+              <stop offset="1" stopColor="#ff6b35" />
             </linearGradient>
             <linearGradient
               id="paint7_linear_116:1151"
@@ -435,8 +435,8 @@ export default function NotFound() {
               y2="166.552"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint8_linear_116:1151"
@@ -447,7 +447,7 @@ export default function NotFound() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#132c44" stopOpacity="0" />
-              <stop offset="1" stopColor="#f472b6" />
+              <stop offset="1" stopColor="#ff6b35" />
             </linearGradient>
             <linearGradient
               id="paint9_linear_116:1151"
@@ -457,8 +457,8 @@ export default function NotFound() {
               y2="32.2741"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#f472b6" />
-              <stop offset="1" stopColor="#f472b6" stopOpacity="0" />
+              <stop stopColor="#ff6b35" />
+              <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>

@@ -29,7 +29,7 @@ export default function ScrollUp() {
         <div
           onClick={scrollToTop}
           aria-label="scroll to top"
-          className="bg-accent hover:shadow-lg flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-white shadow-md transition duration-300 ease-in-out"
+          className="bg-orange hover:shadow-lg flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-white shadow-md transition duration-300 ease-in-out"
         >
           <span className="mt-2 h-3 w-3 rotate-45 border-t border-l border-white"></span>
         </div>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export function DocumentUploadStep({ formData, setFormData }) {
+export function DocumentUploadStep() {
   return (
     <div className="space-y-6">
       <div>

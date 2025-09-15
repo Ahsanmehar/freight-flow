@@ -29,6 +29,7 @@ import {
   ShieldCheck,
   Headphones,
   Star,
+  MoveLeft,
 } from "lucide-react";
 
 const TechIcon = ({ name, className = "" }) => {
@@ -64,6 +65,7 @@ const TechIcon = ({ name, className = "" }) => {
     "shield-check": <ShieldCheck className={className} />,
     headphones: <Headphones className={className} />,
     star: <Star className={className} />,
+    "move-left": <MoveLeft className={className} />,
   };
 
   return icons[name.toLowerCase()] || <span className={className}>{name}</span>;
