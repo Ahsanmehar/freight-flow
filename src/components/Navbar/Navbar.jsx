@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: 'Carrier Signup', path: '/carrier-signup', icon: 'building-2' },
     { name: 'Dashboard', path: '/dashboard', icon: 'layout-dashboard' },
     { name: 'Request Load', path: '/request-load', icon: 'truck' },
-    { name: 'Payment', path: '/payment', icon: 'wallet' },
+    { name: 'Payments', path: '/payments', icon: 'wallet' },
     { name: 'Compliance', path: '/compliance', icon: 'shield' },
     { name: 'Support', path: '/support', icon: 'circle-question-mark' },
     { name: 'Admin', path: '/admin', icon: 'settings' }

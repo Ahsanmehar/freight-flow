@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Phone } from "lucide-react";
 import Pricing from "./pricing";
 import { Faqs } from "./Faqs.jsx";
@@ -28,14 +27,4 @@ export default function PricingPage() {
       <Faqs />
     </main>
   );
-=======
-import React from 'react'
-
-function index() {
-  return (
-    <div>index</div>
-  )
->>>>>>> d42b9b534a9c7ddb7bcf89fa0ab7ef2c5836392f
 }
-
-export default index

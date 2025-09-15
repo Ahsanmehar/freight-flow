@@ -21,12 +21,12 @@ body {
   --color-bg1: #0c0c0c; /* bg1 */
   --color-bg2: #121212; /* bg2 */
 
-    --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
-    --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);
-    --shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
-    --shadow-btn: 0px 1px 2px rgba(4, 10, 34, 0.15);
-    --shadow-btn-hover: 0px 1px 2px rgba(0, 0, 0, 0.15);
-  }
+  --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
+  --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);
+  --shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
+  --shadow-btn: 0px 1px 2px rgba(4, 10, 34, 0.15);
+  --shadow-btn-hover: 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
 
 @layer utilities {
   .container {
@@ -90,8 +90,8 @@ body {
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(87.17% 0.009 258.34);
   --primary: oklch(0.34 0.166 301.4);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.402 0.184 10.4);
@@ -162,18 +162,13 @@ body {
   }
 }
 
-
-
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-
-
 .holographic-card {
-
   background: #111;
   position: relative;
   overflow: hidden;
@@ -181,27 +176,25 @@ body {
   transition: all 0.5s ease;
 }
 
-@media screen and (max-width:775px) {
+@media screen and (max-width: 775px) {
   .holographic-card {
-  width: 100%;
-  height: 200px;
+    width: 100%;
+    height: 200px;
+  }
 }
-}
-
-
 
 .holographic-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
   background: linear-gradient(
-    0deg, 
-    transparent, 
-    transparent 30%, 
-    rgba(0,255,255,0.3)
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(0, 255, 255, 0.3)
   );
   transform: rotate(-45deg);
   transition: all 0.5s ease;
@@ -210,18 +203,13 @@ body {
 
 .holographic-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 .holographic-card:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
-
-
-
-
-
 
 .hover-underline {
   color: #ffffff;
@@ -231,11 +219,11 @@ body {
 
 .hover-underline::after,
 .hover-underline::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right,#007bff , #1d4ed8);
+  background: linear-gradient(to right, #007bff, #1d4ed8);
   bottom: -5px;
   left: 0;
   transform: scaleX(0);

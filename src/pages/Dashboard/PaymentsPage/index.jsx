@@ -1,21 +1,11 @@
-"use client"
-import * as React from "react"
-import { motion } from "framer-motion"
-import { Input } from "@/components/ui/input"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-} from "@/components/ui/table"
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent
-} from "@/components/ui/tabs"
-import { cn } from "@/lib/utils"
-import { Download, Zap } from "lucide-react"
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import * as React from "react";
+import { Input } from "@/components/ui/input";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
+import { Download, Zap } from "lucide-react";
 
 export default function InvoicesPage() {
   const [formData, setFormData] = React.useState({
@@ -23,56 +13,116 @@ export default function InvoicesPage() {
     accountName: "",
     routingNumber: "",
     accountNumber: "",
-  })
+  });
 
-  const [errors, setErrors] = React.useState({})
+  const [errors, setErrors] = React.useState({});
 
   const invoices = [
-    { id: "INV-001", status: "Overdue", company: "ABC Transport", route: "LA → Phoenix", amount: "$1,200", due: "12/8/2024" },
-    { id: "INV-002", status: "Pending", company: "XYZ Logistics", route: "Chicago → Detroit", amount: "$950", due: "12/15/2024" },
-    { id: "INV-003", status: "Paid", company: "Global Freight", route: "Houston → Dallas", amount: "$2,400", due: "12/20/2024" },
-    { id: "INV-004", status: "quick pay", company: "TransWorld", route: "Miami → Atlanta", amount: "$1,050", due: "12/22/2024" },
-    { id: "INV-005", status: "Pending", company: "NextGen Transport", route: "Seattle → Portland", amount: "$780", due: "12/25/2024" },
-  ]
+    {
+      id: "INV-001",
+      status: "Overdue",
+      company: "ABC Transport",
+      route: "LA → Phoenix",
+      amount: "$1,200",
+      due: "12/8/2024",
+    },
+    {
+      id: "INV-002",
+      status: "Pending",
+      company: "XYZ Logistics",
+      route: "Chicago → Detroit",
+      amount: "$950",
+      due: "12/15/2024",
+    },
+    {
+      id: "INV-003",
+      status: "Paid",
+      company: "Global Freight",
+      route: "Houston → Dallas",
+      amount: "$2,400",
+      due: "12/20/2024",
+    },
+    {
+      id: "INV-004",
+      status: "quick pay",
+      company: "TransWorld",
+      route: "Miami → Atlanta",
+      amount: "$1,050",
+      due: "12/22/2024",
+    },
+    {
+      id: "INV-005",
+      status: "Pending",
+      company: "NextGen Transport",
+      route: "Seattle → Portland",
+      amount: "$780",
+      due: "12/25/2024",
+    },
+  ];
   const data = [
-    { id: 1, icon: "⏰", title: "Total Pending", text: "$1,750", label: "3 invoices" },
-    { id: 2, icon: "✅", title: "Total Paid", text: "$2,650", label: "This month" },
-    { id: 3, icon: "⚡", title: "Quick Pay Used", text: "18%", label: "of total volume" },
-  ]
+    {
+      id: 1,
+      icon: "⏰",
+      title: "Total Pending",
+      text: "$1,750",
+      label: "3 invoices",
+    },
+    {
+      id: 2,
+      icon: "✅",
+      title: "Total Paid",
+      text: "$2,650",
+      label: "This month",
+    },
+    {
+      id: 3,
+      icon: "⚡",
+      title: "Quick Pay Used",
+      text: "18%",
+      label: "of total volume",
+    },
+  ];
 
   const validate = () => {
-    let newErrors = {}
+    let newErrors = {};
 
     if (!formData.method || formData.method === "Select method") {
-      newErrors.method = "Please select a payout method."
+      newErrors.method = "Please select a payout method.";
     }
     if (!formData.accountName.trim()) {
-      newErrors.accountName = "Account name is required."
+      newErrors.accountName = "Account name is required.";
     }
     if (!/^\d{9}$/.test(formData.routingNumber)) {
-      newErrors.routingNumber = "Routing number must be 9 digits."
+      newErrors.routingNumber = "Routing number must be 9 digits.";
     }
     if (!/^\d{6,17}$/.test(formData.accountNumber)) {
-      newErrors.accountNumber = "Account number must be 6–17 digits."
+      newErrors.accountNumber = "Account number must be 6–17 digits.";
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = () => {
     if (validate()) {
-      alert("✅ Payout method added successfully!")
-      setFormData({ method: "", accountName: "", routingNumber: "", accountNumber: "" })
-      setErrors({})
+      alert("✅ Payout method added successfully!");
+      setFormData({
+        method: "",
+        accountName: "",
+        routingNumber: "",
+        accountNumber: "",
+      });
+      setErrors({});
     }
-  }
+  };
 
   return (
     <div className="p-4 sm:p-6 md:p-8 bg-[var(--color-bg1)] text-[var(--color-text1)] min-h-screen">
-            <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-[var(--color-white)]">Payments</h1>
+          <h1 className="text-2xl font-bold text-[var(--color-white)]">
+            Payments
+          </h1>
           <p className="text-sm text-[var(--color-text1)]">
             Manage invoices, payments, and payout methods
           </p>
@@ -103,12 +153,12 @@ export default function InvoicesPage() {
                 {card.label}
               </span>
             </div>
-      
+
             <div className="text-4xl">{card.icon}</div>
           </div>
         ))}
       </motion.div>
-      
+
       <Tabs defaultValue="invoices" className="w-full">
         <motion.div
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 sm:mb-6 gap-4"
@@ -175,20 +225,28 @@ export default function InvoicesPage() {
                     <TableCell className="min-w-[200px]">
                       <div className="flex flex-col">
                         <div className="flex items-center gap-2">
-                          <span className="font-semibold text-[var(--color-white)] text-sm sm:text-base">{inv.id}</span>
+                          <span className="font-semibold text-[var(--color-white)] text-sm sm:text-base">
+                            {inv.id}
+                          </span>
                           <span
                             className={cn(
                               "text-xs px-2 py-0.5 rounded-full font-medium",
-                              inv.status === "Paid" && "bg-[var(--color-bright-blue2)] text-[var(--color-white)]",
-                              inv.status === "Pending" && "bg-[var(--color-orange)] text-[var(--color-white)]",
-                              inv.status === "Overdue" && "bg-[var(--color-red-accent1)] text-[var(--color-white)]",
-                              inv.status === "quick pay" && "bg-[var(--color-bright-blue1)] text-[var(--color-white)]"
+                              inv.status === "Paid" &&
+                                "bg-[var(--color-bright-blue2)] text-[var(--color-white)]",
+                              inv.status === "Pending" &&
+                                "bg-[var(--color-orange)] text-[var(--color-white)]",
+                              inv.status === "Overdue" &&
+                                "bg-[var(--color-red-accent1)] text-[var(--color-white)]",
+                              inv.status === "quick pay" &&
+                                "bg-[var(--color-bright-blue1)] text-[var(--color-white)]"
                             )}
                           >
                             {inv.status}
                           </span>
                         </div>
-                        <span className="text-xs sm:text-sm text-[var(--color-text2)]">{inv.company} • {inv.route}</span>
+                        <span className="text-xs sm:text-sm text-[var(--color-text2)]">
+                          {inv.company} • {inv.route}
+                        </span>
                       </div>
                     </TableCell>
 
@@ -198,8 +256,12 @@ export default function InvoicesPage() {
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 200 }}
                       >
-                        <span className="font-semibold text-[var(--color-white)] text-sm sm:text-base">{inv.amount}</span>
-                        <span className="text-xs text-[var(--color-text2)]">Due: {inv.due}</span>
+                        <span className="font-semibold text-[var(--color-white)] text-sm sm:text-base">
+                          {inv.amount}
+                        </span>
+                        <span className="text-xs text-[var(--color-text2)]">
+                          Due: {inv.due}
+                        </span>
                       </motion.div>
                     </TableCell>
 
@@ -217,7 +279,9 @@ export default function InvoicesPage() {
                     </TableCell>
 
                     <TableCell className="pl-0 min-w-[50px]">
-                      <button className="px-2 py-1 text-lg sm:text-xl text-[var(--color-white)]">⋯</button>
+                      <button className="px-2 py-1 text-lg sm:text-xl text-[var(--color-white)]">
+                        ⋯
+                      </button>
                     </TableCell>
                   </motion.tr>
                 ))}
@@ -235,7 +299,9 @@ export default function InvoicesPage() {
             className="bg-[var(--color-bg2)] rounded-xl border border-[var(--color-text2)] shadow-[var(--shadow-two)] p-4 sm:p-6"
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-4">
-              <h2 className="text-base sm:text-lg font-semibold text-[var(--color-white)]">Payout Methods</h2>
+              <h2 className="text-base sm:text-lg font-semibold text-[var(--color-white)]">
+                Payout Methods
+              </h2>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -254,14 +320,25 @@ export default function InvoicesPage() {
                 <div className="bg-[var(--color-bg2)] p-2 rounded-md">🏢</div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[var(--color-white)] font-semibold text-sm sm:text-base">Business Checking</span>
-                    <span className="bg-[var(--color-dark)] text-[var(--color-white)] text-xs px-2 py-0.5 rounded-md">Default</span>
+                    <span className="text-[var(--color-white)] font-semibold text-sm sm:text-base">
+                      Business Checking
+                    </span>
+                    <span className="bg-[var(--color-dark)] text-[var(--color-white)] text-xs px-2 py-0.5 rounded-md">
+                      Default
+                    </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-[var(--color-text2)]">****1234 • 1–2 business days</p>
+                  <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                    ****1234 • 1–2 business days
+                  </p>
                 </div>
               </div>
               <div className="text-left sm:text-right mt-2 sm:mt-0">
-                <p className="text-xs sm:text-sm text-[var(--color-text2)]">Fee: <span className="font-semibold text-[var(--color-white)]">Free</span></p>
+                <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                  Fee:{" "}
+                  <span className="font-semibold text-[var(--color-white)]">
+                    Free
+                  </span>
+                </p>
                 <p className="text-xs text-[var(--color-text2)]">ACH</p>
               </div>
               <motion.button
@@ -280,12 +357,21 @@ export default function InvoicesPage() {
               <div className="flex items-center gap-4">
                 <div className="bg-[var(--color-bg2)] p-2 rounded-md">📱</div>
                 <div>
-                  <p className="text-[var(--color-white)] font-semibold text-sm sm:text-base">Zelle Transfer</p>
-                  <p className="text-xs sm:text-sm text-[var(--color-text2)]">john@company.com • Within minutes</p>
+                  <p className="text-[var(--color-white)] font-semibold text-sm sm:text-base">
+                    Zelle Transfer
+                  </p>
+                  <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                    john@company.com • Within minutes
+                  </p>
                 </div>
               </div>
               <div className="text-left sm:text-right mt-2 sm:mt-0">
-                <p className="text-xs sm:text-sm text-[var(--color-text2)]">Fee: <span className="font-semibold text-[var(--color-white)]">$2.50</span></p>
+                <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                  Fee:{" "}
+                  <span className="font-semibold text-[var(--color-white)]">
+                    $2.50
+                  </span>
+                </p>
                 <p className="text-xs text-[var(--color-text2)]">Zelle</p>
               </div>
               <motion.button
@@ -304,12 +390,21 @@ export default function InvoicesPage() {
               <div className="flex items-center gap-4">
                 <div className="bg-[var(--color-bg2)] p-2 rounded-md">💳</div>
                 <div>
-                  <p className="text-[var(--color-white)] font-semibold text-sm sm:text-base">Wire Transfer</p>
-                  <p className="text-xs sm:text-sm text-[var(--color-text2)]">First National Bank • Same day</p>
+                  <p className="text-[var(--color-white)] font-semibold text-sm sm:text-base">
+                    Wire Transfer
+                  </p>
+                  <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                    First National Bank • Same day
+                  </p>
                 </div>
               </div>
               <div className="text-left sm:text-right mt-2 sm:mt-0">
-                <p className="text-xs sm:text-sm text-[var(--color-text2)]">Fee: <span className="font-semibold text-[var(--color-white)]">$25.00</span></p>
+                <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                  Fee:{" "}
+                  <span className="font-semibold text-[var(--color-white)]">
+                    $25.00
+                  </span>
+                </p>
                 <p className="text-xs text-[var(--color-text2)]">Wire</p>
               </div>
               <motion.button
@@ -349,7 +444,9 @@ export default function InvoicesPage() {
                     <option>Wire Transfer</option>
                   </select>
                   {errors.method && (
-                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.method}</p>
+                    <p className="text-red-500 text-xs sm:text-sm mt-1">
+                      {errors.method}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -365,7 +462,9 @@ export default function InvoicesPage() {
                     className="h-12 sm:h-14 text-sm sm:text-base"
                   />
                   {errors.accountName && (
-                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.accountName}</p>
+                    <p className="text-red-500 text-xs sm:text-sm mt-1">
+                      {errors.accountName}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -376,12 +475,17 @@ export default function InvoicesPage() {
                     placeholder="123456789"
                     value={formData.routingNumber}
                     onChange={(e) =>
-                      setFormData({ ...formData, routingNumber: e.target.value })
+                      setFormData({
+                        ...formData,
+                        routingNumber: e.target.value,
+                      })
                     }
                     className="h-12 sm:h-14 text-sm sm:text-base"
                   />
                   {errors.routingNumber && (
-                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.routingNumber}</p>
+                    <p className="text-red-500 text-xs sm:text-sm mt-1">
+                      {errors.routingNumber}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -392,12 +496,17 @@ export default function InvoicesPage() {
                     placeholder="1234567890"
                     value={formData.accountNumber}
                     onChange={(e) =>
-                      setFormData({ ...formData, accountNumber: e.target.value })
+                      setFormData({
+                        ...formData,
+                        accountNumber: e.target.value,
+                      })
                     }
                     className="h-12 sm:h-14 text-sm sm:text-base"
                   />
                   {errors.accountNumber && (
-                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.accountNumber}</p>
+                    <p className="text-red-500 text-xs sm:text-sm mt-1">
+                      {errors.accountNumber}
+                    </p>
                   )}
                 </div>
               </div>
@@ -426,7 +535,8 @@ export default function InvoicesPage() {
             >
               <span className="text-lg sm:text-xl">ℹ️</span>
               <p className="text-xs sm:text-sm">
-                Factoring allows you to get paid immediately by selling your invoices to a third party at a discount.
+                Factoring allows you to get paid immediately by selling your
+                invoices to a third party at a discount.
               </p>
             </motion.div>
 
@@ -459,10 +569,16 @@ export default function InvoicesPage() {
                   <div className="bg-[var(--color-bg1)] p-2 rounded-md">🏦</div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[var(--color-white)] font-semibold text-sm sm:text-base">FactorMax</span>
-                      <span className="bg-[var(--color-dark)] text-[var(--color-white)] text-xs px-2 py-0.5 rounded-md">Active</span>
+                      <span className="text-[var(--color-white)] font-semibold text-sm sm:text-base">
+                        FactorMax
+                      </span>
+                      <span className="bg-[var(--color-dark)] text-[var(--color-white)] text-xs px-2 py-0.5 rounded-md">
+                        Active
+                      </span>
                     </div>
-                    <p className="text-xs sm:text-sm text-[var(--color-text2)]">Same day funding • 2.5% fee</p>
+                    <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                      Same day funding • 2.5% fee
+                    </p>
                   </div>
                 </div>
                 <motion.button
@@ -482,10 +598,16 @@ export default function InvoicesPage() {
                   <div className="bg-[var(--color-bg1)] p-2 rounded-md">💰</div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[var(--color-white)] font-semibold text-sm sm:text-base">QuickCash Factoring</span>
-                      <span className="bg-white text-black text-xs px-2 py-0.5 rounded-md">Inactive</span>
+                      <span className="text-[var(--color-white)] font-semibold text-sm sm:text-base">
+                        QuickCash Factoring
+                      </span>
+                      <span className="bg-white text-black text-xs px-2 py-0.5 rounded-md">
+                        Inactive
+                      </span>
                     </div>
-                    <p className="text-xs sm:text-sm text-[var(--color-text2)]">24-hour funding • 3.2% fee</p>
+                    <p className="text-xs sm:text-sm text-[var(--color-text2)]">
+                      24-hour funding • 3.2% fee
+                    </p>
                   </div>
                 </div>
                 <motion.button
@@ -504,20 +626,38 @@ export default function InvoicesPage() {
               transition={{ duration: 0.6 }}
               className="border border-[var(--color-text2)] rounded-xl bg-[var(--color-bg1)] p-4 sm:p-6"
             >
-              <h2 className="text-base sm:text-lg font-semibold text-[var(--color-white)] mb-4">Factoring Calculator</h2>
+              <h2 className="text-base sm:text-lg font-semibold text-[var(--color-white)] mb-4">
+                Factoring Calculator
+              </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
                 <div>
-                  <label className="block mb-1 text-xs sm:text-sm font-semibold text-[var(--color-white)]">Invoice Amount</label>
-                  <Input placeholder="$1,000" className="h-12 sm:h-14 text-sm sm:text-base" />
+                  <label className="block mb-1 text-xs sm:text-sm font-semibold text-[var(--color-white)]">
+                    Invoice Amount
+                  </label>
+                  <Input
+                    placeholder="$1,000"
+                    className="h-12 sm:h-14 text-sm sm:text-base"
+                  />
                 </div>
                 <div>
-                  <label className="block mb-1 text-xs sm:text-sm font-semibold text-[var(--color-white)]">Factor Rate</label>
-                  <Input placeholder="2.5%" className="h-12 sm:h-14 text-sm sm:text-base" />
+                  <label className="block mb-1 text-xs sm:text-sm font-semibold text-[var(--color-white)]">
+                    Factor Rate
+                  </label>
+                  <Input
+                    placeholder="2.5%"
+                    className="h-12 sm:h-14 text-sm sm:text-base"
+                  />
                 </div>
                 <div>
-                  <label className="block mb-1 text-xs sm:text-sm font-semibold text-[var(--color-white)]">You'll Receive</label>
-                  <Input placeholder="$975" disabled className="h-12 sm:h-14 text-sm sm:text-base" />
+                  <label className="block mb-1 text-xs sm:text-sm font-semibold text-[var(--color-white)]">
+                    You'll Receive
+                  </label>
+                  <Input
+                    placeholder="$975"
+                    disabled
+                    className="h-12 sm:h-14 text-sm sm:text-base"
+                  />
                 </div>
               </div>
 
@@ -533,5 +673,5 @@ export default function InvoicesPage() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }

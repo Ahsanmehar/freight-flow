@@ -21,7 +21,6 @@ const WhyCard = ({ feature, index }) => {
         transition: { duration: 0.2 },
       }}
     >
-
       <div className="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 opacity-0 group-hover:opacity-100 transition duration-500">
         <div className="w-full h-full bg-bg2 rounded-2xl"></div>
       </div>

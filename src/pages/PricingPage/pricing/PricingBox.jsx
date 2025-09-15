@@ -4,7 +4,7 @@ const PricingBox = (props) => {
   const { price, duration, packageName, subtitle, children } = props;
 
   return (
-      <div className="h-full shadow-one bg-bg2 relative z-10 rounded-xs px-8 py-10">
+      <div className="h-full shadow-one bg-bg2 relative z-10 rounded-xs px-8 py-10 shadow-two transition-shadow hover:shadow-orange">
         <div className="flex items-center justify-between">
           <h3 className="mb-2 text-[32px] font-bold text-white">
             $<span className="amount">{price}</span>
@@ -18,7 +18,7 @@ const PricingBox = (props) => {
         </div>
         <p className="text-text2 mb-7 text-base">{subtitle}</p>
         <div className="mb-8 border-b pb-8 border-white/10">
-          <Button size="sm" className="rounded w-full">
+          <Button size="sm" className="rounded w-full bg-orange">
             Start 14-Day Free Trial
           </Button>
         </div>
@@ -50,8 +50,8 @@ const PricingBox = (props) => {
                 y2="83.2919"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#1d4ed8" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#1d4ed8" stopOpacity="0" />
+                <stop stopColor="#ff6b35" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_70:153"
@@ -61,8 +61,8 @@ const PricingBox = (props) => {
                 y2="103.645"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#1d4ed8" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#1d4ed8" stopOpacity="0" />
+                <stop stopColor="#ff6b35" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#ff6b35" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
