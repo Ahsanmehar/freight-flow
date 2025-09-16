@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Badge } from "@/components/ui/badge";
-import Qicons from "@/Components/Qicons";
+import Qicons from "@/components/Qicons";
 
 export default function Sidebar() {
   return (
