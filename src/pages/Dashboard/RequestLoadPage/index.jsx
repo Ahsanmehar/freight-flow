@@ -1,8 +1,8 @@
 import React from "react";
 import { animate } from "motion";
-import SectionTitle from "@/Components/SectionTitle";
 import LoadForm from "./LoadForm";
 import Sidebar from "./Sidebar";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function RequestLoadPage() {
   React.useEffect(() => {
@@ -14,6 +14,7 @@ export default function RequestLoadPage() {
       <SectionTitle
         title="Request a Load"
         paragraph="Fill out the details below and we'll match you with available carriers"
+        center
         mb="40px"
       />
       <main className="flex flex-col lg:flex-row gap-8">
