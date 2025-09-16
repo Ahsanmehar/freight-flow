@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="px-4 py-5 bg-bg1/20 text-text1">
+      <nav className="px-4 py-5 bg-bg2 text-text1 fixed top-0 z-50 w-full">
         <div className="max-w-6xl mx-auto flex items-center justify-between space-x-5 gap-3 ml-1 ">
           <div className="flex items-center space-x-3">
             <STechIcon name="truck" className="w-8 h-8 text-orange" />
