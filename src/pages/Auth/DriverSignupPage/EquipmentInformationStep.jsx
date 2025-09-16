@@ -8,6 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import ErrorMessage from "./ErrorMessage";
 
 export function EquipmentInformationStep({
   formData,
