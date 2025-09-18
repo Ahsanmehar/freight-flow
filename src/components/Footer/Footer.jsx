@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <STechIcon name="truck" className="w-8 h-8 text-orange" />
               <span className="text-xl font-semibold text-text1">
-                FreightFlow
+                RWCLogisticsLLC
               </span>
             </div>
             <p className="text-sm text-text2">
@@ -110,7 +110,7 @@ const Footer = () => {
 
         <div className="border-t border-text2/30 mt-8 pt-6">
           <p className="text-center text-sm text-text2">
-            © 2025 FreightFlow. All rights reserved.
+            © 2025 RWCLogisticsLLC. All rights reserved.
           </p>
         </div>
       </div>
