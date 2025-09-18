@@ -4,9 +4,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import ScrollUp from "./components/ScrollUp";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
-import PricingPage from "./pages/PricingPage";
+// import PricingPage from "./pages/PricingPage";
 import DriverSignupPage from "./pages/Auth/DriverSignupPage";
-import CarrierSignupPage from "./pages/Auth/CarrierSignupPage";
+// import CarrierSignupPage from "./pages/Auth/CarrierSignupPage";
 import DashboardHomePage from "./pages/Dashboard/DashboardHomePage";
 import RequestLoadPage from "./pages/Dashboard/RequestLoadPage";
 import PaymentsPage from "./pages/Dashboard/PaymentsPage";
@@ -24,9 +24,9 @@ const App = () => {
       <RouterRoutes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
+        {/* <Route path="/pricing" element={<PricingPage />} /> */}
         <Route path="/driver-signup" element={<DriverSignupPage />} />
-        <Route path="/carrier-signup" element={<CarrierSignupPage />} />
+        {/* <Route path="/carrier-signup" element={<CarrierSignupPage />} /> */}
         <Route path="/dashboard" element={<DashboardHomePage />} />
         <Route path="/request-load" element={<RequestLoadPage />} />
         <Route path="/payments" element={<PaymentsPage />} />

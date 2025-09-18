@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
 import {
@@ -22,7 +22,6 @@ export function EquipmentInformationStep({
       [field]: value,
     }));
 
-    // Clear error when user selects an option
     if (errors[field]) {
       setErrors((prev) => ({
         ...prev,
@@ -34,12 +33,8 @@ export function EquipmentInformationStep({
   const validateField = (field, value) => {
     let error = "";
 
-    if (field === "truckYear" && !value) {
-      error = "Tractor year is required";
-    } else if (field === "trailerYear" && !value) {
-      error = "Trailer year is required";
-    } else if (field === "trailerType" && !value) {
-      error = "Trailer type is required";
+    if (field === "truckType" && !value) {
+      error = "Truck type is required";
     }
 
     setErrors((prev) => ({
@@ -50,90 +45,25 @@ export function EquipmentInformationStep({
     return !error;
   };
 
-  const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: 30 }, (_, i) => currentYear - i);
-
   return (
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold text-white mb-6">
-          Step 3: Equipment Information
+          Step 2: Equipment Information
         </h2>
-
-        {/* Tractor Year Buttons */}
         <div className="mb-6">
-          <Label className="text-sm font-medium text-text1 mb-3 block">
-            Tractor Year *
-          </Label>
-          <div className="flex flex-wrap gap-2">
-            {years.map((year) => (
-              <Button
-                key={year}
-                type="button"
-                variant={formData.truckYear === year ? "secondary" : "outline"}
-                className={`px-3 py-1 h-8 text-sm ${
-                  formData.truckYear === year
-                    ? "bg-bright-blue1 text-white"
-                    : "bg-white/80 text-black/90 hover:bg-white/80"
-                }`}
-                onClick={() => {
-                  handleInputChange("truckYear", year);
-                  validateField("truckYear", year);
-                }}
-              >
-                {year}
-              </Button>
-            ))}
-          </div>
-          {errors.truckYear && <ErrorMessage message={errors.truckYear} />}
-        </div>
-
-        {/* Trailer Year Buttons */}
-        <div className="mb-6">
-          <Label className="text-sm font-medium text-text1 mb-3 block">
-            Trailer Year *
-          </Label>
-          <div className="flex flex-wrap gap-2">
-            {years.map((year) => (
-              <Button
-                key={year}
-                type="button"
-                variant={
-                  formData.trailerYear === year ? "secondary" : "outline"
-                }
-                className={`px-3 py-1 h-8 text-sm ${
-                  formData.trailerYear === year
-                    ? "bg-bright-blue1 text-white"
-                    : "bg-white/80 text-black/90 hover:bg-white/80"
-                }`}
-                onClick={() => {
-                  handleInputChange("trailerYear", year);
-                  validateField("trailerYear", year);
-                }}
-              >
-                {year}
-              </Button>
-            ))}
-          </div>
-          {errors.trailerYear && <ErrorMessage message={errors.trailerYear} />}
-        </div>
-
-        <div className="mb-6">
-          <Label
-            htmlFor="trailerType"
-            className="text-sm font-medium text-text1"
-          >
-            Trailer Type *
+          <Label htmlFor="truckType" className="text-sm font-medium text-text1">
+            Truck Type *
           </Label>
           <Select
-            value={formData.trailerType || ""}
+            value={formData.truckType || ""}
             onValueChange={(value) => {
-              handleInputChange("trailerType", value);
-              validateField("trailerType", value);
+              handleInputChange("truckType", value);
+              validateField("truckType", value);
             }}
           >
             <SelectTrigger className="w-full mt-2 !h-14">
-              <SelectValue placeholder="Select trailer type" />
+              <SelectValue placeholder="Select truck type" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="dry_van">Dry Van</SelectItem>
@@ -145,7 +75,7 @@ export function EquipmentInformationStep({
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
           </Select>
-          {errors.trailerType && <ErrorMessage message={errors.trailerType} />}
+          {errors.truckType && <ErrorMessage message={errors.truckType} />}
         </div>
 
         {/* Additional Equipment Notes Textarea */}

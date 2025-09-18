@@ -4,7 +4,7 @@ import home_images from "@/assets/images/home";
 import { Button } from "@/components/ui/button";
 import STechIcon from "@/components/STechIcon";
 import SectionTitle from "@/components/SectionTitle";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -35,34 +35,22 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
-          
-  <Link to="/driver-signup">
-    <Button
-      variant="secondary"
-      className="flex items-center justify-center gap-2 w-72 px-12 py-6 rounded-full shadow-lg bg-bright-blue1 hover:bg-bright-blue2 text-lg"
-    >
-      <STechIcon name="truck" className="!w-6 !h-6" />
-      <span className="whitespace-nowrap">Join as a Driver</span>
-      <STechIcon name="move-right" className="!w-6 !h-6" />
-    </Button>
-  </Link>
-
-  <Link to="/carrier-signup">
-    <Button
-      variant="secondary"
-      className="flex items-center justify-center gap-2 w-72 px-12 py-6 rounded-full shadow-lg bg-bright-blue1 hover:bg-bright-blue2 text-lg"
-    >
-      <STechIcon name="box" className="!w-6 !h-6" />
-      <span className="whitespace-nowrap">Ship Your Freight</span>
-      <STechIcon name="move-right" className="!w-6 !h-6" />
-    </Button>
-  </Link>
-</motion.div>
+          <Link to="/driver-signup">
+            <Button
+              variant="secondary"
+              className="flex items-center justify-center gap-2 w-72 px-12 py-6 rounded-full shadow-lg bg-bright-blue1 hover:bg-bright-blue2 text-lg"
+            >
+              <STechIcon name="truck" className="!w-6 !h-6" />
+              <span className="whitespace-nowrap">Join as a Driver</span>
+              <STechIcon name="move-right" className="!w-6 !h-6" />
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

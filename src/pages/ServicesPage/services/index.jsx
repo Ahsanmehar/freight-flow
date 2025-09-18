@@ -7,7 +7,7 @@ import SectionTitle from '@/components/SectionTitle';
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-10 overflow-hidden">
       <div className="container">
 
         <motion.div

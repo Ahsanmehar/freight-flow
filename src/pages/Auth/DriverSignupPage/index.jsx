@@ -13,22 +13,16 @@ const steps = [
   },
   {
     id: 2,
-    title: "Company Details",
-    subtitle: "MC/DOT and business info",
-  },
-  {
-    id: 3,
     title: "Equipment Information",
     subtitle: "Truck and trailer details",
   },
   {
-    id: 4,
+    id: 3,
     title: "Document Upload",
     subtitle: "Required certificates and licenses",
   },
 ];
 
-// Validation functions
 const validateEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
@@ -36,23 +30,11 @@ const validateEmail = (email) => {
 
 const validatePhone = (phone) => {
   const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  return phoneRegex.test(phone.replace(/\D/g, ''));
-};
-
-const validateMCNumber = (mcNumber) => {
-  return /^\d{7}$/.test(mcNumber.replace(/\D/g, ''));
-};
-
-const validateDOTNumber = (dotNumber) => {
-  return /^\d{7,8}$/.test(dotNumber.replace(/\D/g, ''));
+  return phoneRegex.test(phone.replace(/\D/g, ""));
 };
 
 const validateZipCode = (zipCode) => {
   return /^\d{5}(-\d{4})?$/.test(zipCode);
-};
-
-const validateFederalId = (federalId) => {
-  return /^\d{2}-\d{7}$/.test(federalId);
 };
 
 function DriverSignupPage() {
@@ -62,11 +44,13 @@ function DriverSignupPage() {
 
   const validateStep = () => {
     const newErrors = {};
-    
+
     switch (currentStep) {
       case 1:
-        if (!formData.firstName?.trim()) newErrors.firstName = "First name is required";
-        if (!formData.lastName?.trim()) newErrors.lastName = "Last name is required";
+        if (!formData.firstName?.trim())
+          newErrors.firstName = "First name is required";
+        if (!formData.lastName?.trim())
+          newErrors.lastName = "Last name is required";
         if (!formData.email?.trim()) {
           newErrors.email = "Email is required";
         } else if (!validateEmail(formData.email)) {
@@ -82,30 +66,12 @@ function DriverSignupPage() {
         }
         break;
       case 2:
-        if (!formData.companyName?.trim()) newErrors.companyName = "Company name is required";
-        if (!formData.mcNumber?.trim()) {
-          newErrors.mcNumber = "MC number is required";
-        } else if (!validateMCNumber(formData.mcNumber)) {
-          newErrors.mcNumber = "MC number must be 7 digits";
-        }
-        if (!formData.dotNumber?.trim()) {
-          newErrors.dotNumber = "DOT number is required";
-        } else if (!validateDOTNumber(formData.dotNumber)) {
-          newErrors.dotNumber = "DOT number must be 7-8 digits";
-        }
-        if (formData.federalId && !validateFederalId(formData.federalId)) {
-          newErrors.federalId = "Please enter a valid Tax ID (format: XX-XXXXXXX)";
-        }
-        break;
-      case 3:
-        if (!formData.truckYear) newErrors.truckYear = "Tractor year is required";
-        if (!formData.trailerYear) newErrors.trailerYear = "Trailer year is required";
-        if (!formData.trailerType) newErrors.trailerType = "Trailer type is required";
+        if (!formData.truckType) newErrors.truckType = "Truck type is required";
         break;
       default:
         break;
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -160,12 +126,8 @@ function DriverSignupPage() {
               >
                 Previous
               </Button>
-              <Button
-                variant="secondary"
-                onClick={nextStep}
-                className="px-6"
-              >
-                {currentStep === 4 ? "Submit" : "Next Step"}
+              <Button variant="secondary" onClick={nextStep} className="px-6">
+                {currentStep === 3 ? "Submit" : "Next Step"}
               </Button>
             </div>
           </CardContent>

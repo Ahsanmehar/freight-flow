@@ -1,17 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
 import ErrorMessage from "./ErrorMessage";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
-const states = ["California", "Texas", "Florida", "New York"];
-
-// Validation functions (moved inside the component file)
 const validateEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
@@ -19,7 +9,7 @@ const validateEmail = (email) => {
 
 const validatePhone = (phone) => {
   const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  return phoneRegex.test(phone.replace(/\D/g, ''));
+  return phoneRegex.test(phone.replace(/\D/g, ""));
 };
 
 const validateZipCode = (zipCode) => {
@@ -202,22 +192,15 @@ export function PersonalInformationStep({
             <Label htmlFor="state" className="text-sm font-medium text-text1">
               State
             </Label>
-            <Select
+            <Input
+              id="state"
               value={formData.state || ""}
-              onValueChange={(value) => handleInputChange("state", value)}
-            >
-              <SelectTrigger className="w-full mt-2 !h-14">
-                <SelectValue placeholder="Select state" />
-              </SelectTrigger>
-              <SelectContent>
-                {states.map((state) => (
-                  <SelectItem key={state} value={state}>
-                    {state}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+              onChange={(e) => handleInputChange("state", e.target.value)}
+              className="mt-2"
+              placeholder="Enter state"
+            />
           </div>
+
           <div>
             <Label htmlFor="zipCode" className="text-sm font-medium text-text1">
               ZIP Code

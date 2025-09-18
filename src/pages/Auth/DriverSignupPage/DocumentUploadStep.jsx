@@ -5,10 +5,22 @@ export function DocumentUploadStep() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold text-white mb-6">
-          Step 4: Document Upload
+          Step 3: Document Upload
         </h2>
 
         <div className="space-y-4">
+          <div className="text-sm">
+            <p className="font-medium text-text1 mb-2">Required Documents:</p>
+            <ul className="list-disc list-inside space-y-1 text-text2">
+              <li>Commercial Driver's License (CDL)</li>
+              <li>Medical Certificate</li>
+              <li>Insurance Certificate</li>
+              <li>Vehicle Registration</li>
+              <li>IRP Registration (if applicable)</li>
+              <li>Proof of Van Ownership </li>
+              <li>VIN Number Of the Vehicle </li>
+            </ul>
+          </div>
           <div className="border-2 border-dashed border-white/30 rounded-lg p-8 text-center">
             <div className="text-gray-500 mb-2">
               <svg
@@ -34,17 +46,6 @@ export function DocumentUploadStep() {
             <Button variant="secondary" className="mx-auto">
               Choose Files
             </Button>
-          </div>
-
-          <div className="text-sm">
-            <p className="font-medium text-text1 mb-2">Required Documents:</p>
-            <ul className="list-disc list-inside space-y-1 text-text2">
-              <li>Commercial Driver's License (CDL)</li>
-              <li>Medical Certificate</li>
-              <li>Insurance Certificate</li>
-              <li>Vehicle Registration</li>
-              <li>IRP Registration (if applicable)</li>
-            </ul>
           </div>
         </div>
       </div>

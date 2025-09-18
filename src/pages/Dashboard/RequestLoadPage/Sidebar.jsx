@@ -6,36 +6,6 @@ import Qicons from "@/components/Qicons";
 export default function Sidebar() {
   return (
     <aside className="flex flex-col gap-6 w-full max-w-xs">
-      {/* Right Sidebar */}
-      <section className="border border-text2 rounded-xl p-6 h-auto">
-        <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-          <Qicons name="Clock" className="w-5 h-5 text-white" />
-          Available Dates
-        </h3>
-        <ul className="space-y-3">
-          {[
-            "Sun Dec 08 2024",
-            "Mon Dec 09 2024",
-            "Tue Dec 10 2024",
-            "Thu Dec 12 2024",
-            "Sun Dec 15 2024",
-          ].map((date, idx) => (
-            <li key={idx}>
-              <button
-                type="button"
-                className="border border-text2 text-white text-sm px-3 py-3 rounded-md w-full flex justify-between items-center transition-all duration-200 ease-in-out hover:bg-bright-blue1"
-                disabled
-              >
-                {date}
-                <Badge variant="outline" className="border-text2 text-white">
-                  Available
-                </Badge>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       {/* Market Insights */}
       <section className="border border-text2 rounded-xl p-6">
         <h3 className="text-lg font-semibold mb-6">Market Insights</h3>
