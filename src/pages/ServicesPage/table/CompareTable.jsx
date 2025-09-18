@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 import {
   Table,
   TableHeader,
@@ -8,17 +8,17 @@ import {
   TableHead,
   TableRow,
   TableCell,
-} from '@/components/ui/table';
-import STechIcon from '@/components/STechIcon';
+} from "@/components/ui/table";
+import STechIcon from "@/components/STechIcon";
 
 const rowVariants = {
-  hidden: { opacity: 0, y: 30 }, 
+  hidden: { opacity: 0, y: 30 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.8,
-      delay: i * 0.2, 
+      delay: i * 0.2,
       ease: "easeOut",
     },
   }),
@@ -39,7 +39,7 @@ const CompareTable = ({ data }) => {
               Feature
             </TableHead>
             <TableHead className="font-semibold text-text1 py-4 px-6">
-              FreightFlow
+              RWCLogisticsLLC{" "}
             </TableHead>
             <TableHead className="font-semibold text-text1 py-4 px-6">
               Traditional Brokers
@@ -64,7 +64,10 @@ const CompareTable = ({ data }) => {
               <TableCell className="py-4 px-6">
                 <div className="flex items-center space-x-2">
                   <div className="flex-shrink-0">
-                    <STechIcon name="check-circle" className="h-5 w-5 text-green-500" />
+                    <STechIcon
+                      name="check-circle"
+                      className="h-5 w-5 text-green-500"
+                    />
                   </div>
                   <span className="text-text2">{row.freightFlow}</span>
                 </div>

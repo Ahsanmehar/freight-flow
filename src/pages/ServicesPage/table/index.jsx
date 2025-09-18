@@ -15,7 +15,7 @@ const CompareSection = () => {
           transition={{ duration: 0.8 }}
         >
       <SectionTitle
-        title="Why Choose FreightFlow?"
+        title="Why Choose RWCLogisticsLLC?"
         paragraph="See how we compare to traditional freight brokers"
         center={true}
         width="720px"

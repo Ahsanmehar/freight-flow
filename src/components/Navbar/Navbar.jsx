@@ -100,7 +100,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center space-x-2">
                 <STechIcon name="truck" className="w-6 h-6 text-orange" />
-                <h2 className="text-text1 text-xl font-bold">FreightFlow</h2>
+                <h2 className="text-text1 text-xl font-bold">RWCLogisticsLLC</h2>
               </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}

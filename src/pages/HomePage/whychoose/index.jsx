@@ -43,7 +43,7 @@ const WhyChoose = () => {
           viewport={{ once: true }}
         >
           <SectionTitle
-            title="Why Choose FreightFlow?"
+            title="Why Choose RWCLogisticsLLC?"
             paragraph="Built by logistics experts, powered by AI technology, trusted by thousands of drivers and shippers nationwide."
             center
             width="800px"

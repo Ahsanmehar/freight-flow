@@ -27,7 +27,7 @@ export default function Hero() {
         >
           <SectionTitle
             title="Connect Freight & Carriers with AI-Powered Precision"
-            paragraph="Join thousands of drivers and shippers who trust FreightFlow for fast, secure, and profitable freight matching. Get started in minutes."
+            paragraph="Join thousands of drivers and shippers who trust RWCLogisticsLLC for fast, secure, and profitable freight matching. Get started in minutes."
             center
             width="700px"
             mb="50px"

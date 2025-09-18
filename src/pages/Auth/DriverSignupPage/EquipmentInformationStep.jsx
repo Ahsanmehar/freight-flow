@@ -9,6 +9,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import ErrorMessage from "./ErrorMessage";
+import { Input } from "@/components/ui/input";
 
 export function EquipmentInformationStep({
   formData,
@@ -30,51 +31,24 @@ export function EquipmentInformationStep({
     }
   };
 
-  const validateField = (field, value) => {
-    let error = "";
-
-    if (field === "truckType" && !value) {
-      error = "Truck type is required";
-    }
-
-    setErrors((prev) => ({
-      ...prev,
-      [field]: error,
-    }));
-
-    return !error;
-  };
-
   return (
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold text-white mb-6">
           Step 2: Equipment Information
         </h2>
+
         <div className="mb-6">
           <Label htmlFor="truckType" className="text-sm font-medium text-text1">
             Truck Type *
           </Label>
-          <Select
+          <Input
+            id="truckType"
             value={formData.truckType || ""}
-            onValueChange={(value) => {
-              handleInputChange("truckType", value);
-              validateField("truckType", value);
-            }}
-          >
-            <SelectTrigger className="w-full mt-2 !h-14">
-              <SelectValue placeholder="Select truck type" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="dry_van">Dry Van</SelectItem>
-              <SelectItem value="refrigerated">Refrigerated</SelectItem>
-              <SelectItem value="flatbed">Flatbed</SelectItem>
-              <SelectItem value="step_deck">Step Deck</SelectItem>
-              <SelectItem value="lowboy">Lowboy</SelectItem>
-              <SelectItem value="tanker">Tanker</SelectItem>
-              <SelectItem value="other">Other</SelectItem>
-            </SelectContent>
-          </Select>
+            onChange={(e) => handleInputChange("truckType", e.target.value)}
+            className="mt-2"
+            placeholder="Enter truck name"
+          />
           {errors.truckType && <ErrorMessage message={errors.truckType} />}
         </div>
 
